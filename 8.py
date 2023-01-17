@@ -6,9 +6,6 @@ pw = 'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\x
 un_l = un.encode('latin1')
 pw_l = pw.encode('latin1')
 
-print(un_l)
-print(pw_l)
-
 un_decomp = bz2.decompress(un_l)
 pw_decomp = bz2.decompress(pw_l)
 
