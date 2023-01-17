@@ -14,6 +14,4 @@ for line in data:
     print(count[0]*count[1],end='')
   print()
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(current_dir, "banner.p")
-os.remove(file_path)
+os.remove("banner.p")
