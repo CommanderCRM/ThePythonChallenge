@@ -12,6 +12,7 @@ nothing_values.append('12345')
 nothing_values_after_division.append(div_result)
 print(url_after_division)
 
+# linked list, parsing the number and going to the next link
 while True:
   response = requests.get(url_after_division)
 

@@ -21,6 +21,7 @@ img = Image.open(response)
 even = Image.new('RGB', (w // 2, h // 2))
 odd = Image.new('RGB', (w // 2, h // 2))
 
+# constructing 2 new images from even- and odd-indexed pixels of the original
 for i in range(0, w, 2):
     for j in range(0, h, 2):
         even.putpixel((i // 2, j // 2), img.getpixel((i, j)))

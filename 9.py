@@ -29,6 +29,7 @@ second = [156,141,165,135,169,131,176,130,187,134,191,140,191,146,186,150,179,15
 img = Image.new("RGB", (512, 512), (255, 255, 255))
 draw = ImageDraw.Draw(img)
 
+# drawing 2 polygons using the coords
 draw.polygon(first, fill='black')
 draw.polygon(second, fill='white')
 

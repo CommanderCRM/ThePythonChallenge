@@ -8,6 +8,7 @@ img = Image.open("oxygen.png")
 width, height = img.size
 middle_row = height // 2
 
+# getting every 1st of tuples of gray pixels grouped by 7 and converting R value to ASCII 
 pixels = [img.getpixel((x, middle_row)) for x in range(width)]
 pixels = pixels[::7]
 

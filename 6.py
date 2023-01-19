@@ -9,6 +9,7 @@ urllib.request.urlretrieve(url, "channel.zip")
 nothing_list = []
 comments = []
 
+# linked list, but now in zip archive
 with zipfile.ZipFile("channel.zip", "r") as zip_ref:
     current_file = "90052.txt"
     while True:

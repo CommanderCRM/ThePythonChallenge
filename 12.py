@@ -22,6 +22,7 @@ print(os.path.getsize("evil2.gfx"))
 with open("evil2.gfx", "rb") as f:
     data = f.read()
 
+# dividing the file bytes into 5 parts, constructing images from each part
 for i in range(5):
     open('%d.jpg' % i ,'wb').write(data[i::5])
 
