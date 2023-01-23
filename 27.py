@@ -18,6 +18,7 @@ def get_palette_table(im):
     table = bytes.maketrans(bytes([i for i in range(256)]), bytes(palette))
     return table
 
+# difference between image and its color palette table
 def get_diff_indices(im, table):
     raw = im.tobytes()
     trans = raw.translate(table)
