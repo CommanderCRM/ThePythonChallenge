@@ -1,10 +1,12 @@
 import string
 
+
 # making the translation table (shift by 2 to the right)
 def shift_letters(shift):
-    lowercase_letters = string.ascii_lowercase
-    shifted_letters = lowercase_letters[shift:] + lowercase_letters[:shift]
-    return str.maketrans(lowercase_letters, shifted_letters)
+  lowercase_letters = string.ascii_lowercase
+  shifted_letters = lowercase_letters[shift:] + lowercase_letters[:shift]
+  return str.maketrans(lowercase_letters, shifted_letters)
+
 
 # deciphering
 shift = 2

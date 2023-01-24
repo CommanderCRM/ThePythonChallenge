@@ -4,7 +4,7 @@ import bz2
 result = ""
 
 with open("package.pack", "rb") as f:
-    data = f.read()
+  data = f.read()
 
 decompress_methods = {
   b'x\x9c': (zlib.decompress, ' '),

@@ -18,7 +18,7 @@ while True:
   response = requests.get(url)
 
   info_string += response.cookies["info"].encode('latin-1')
-  
+
   soup = BeautifulSoup(response.content, 'html.parser')
 
   text = soup.get_text()

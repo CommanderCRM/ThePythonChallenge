@@ -4,9 +4,9 @@ from PIL import Image
 password_mgr = HTTPPasswordMgrWithDefaultRealm()
 
 password_mgr.add_password(realm=None,
-                        uri='http://www.pythonchallenge.com',
-                        user='huge',
-                        passwd='file')
+                          uri='http://www.pythonchallenge.com',
+                          user='huge',
+                          passwd='file')
 
 auth_handler = HTTPBasicAuthHandler(password_mgr)
 
@@ -23,12 +23,12 @@ odd = Image.new('RGB', (w // 2, h // 2))
 
 # constructing 2 new images from even- and odd-indexed pixels of the original
 for i in range(0, w, 2):
-    for j in range(0, h, 2):
-        even.putpixel((i // 2, j // 2), img.getpixel((i, j)))
+  for j in range(0, h, 2):
+    even.putpixel((i // 2, j // 2), img.getpixel((i, j)))
 
 for i in range(1, w, 2):
-    for j in range(1, h, 2):
-        odd.putpixel((i // 2, j // 2), img.getpixel((i, j)))
+  for j in range(1, h, 2):
+    odd.putpixel((i // 2, j // 2), img.getpixel((i, j)))
 
 even.save('even.jpg')
 odd.save('odd.jpg')

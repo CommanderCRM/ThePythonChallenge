@@ -5,7 +5,7 @@ from PIL import Image
 url = 'http://www.pythonchallenge.com/pc/ring/bell.png'
 credentials = b'repeat:switch'
 headers = {
-    'Authorization': 'Basic ' + base64.b64encode(credentials).decode(),
+  'Authorization': 'Basic ' + base64.b64encode(credentials).decode(),
 }
 
 request = urllib.request.Request(url, headers=headers)
@@ -21,7 +21,7 @@ diff = [abs(a - b) for a, b in zip(green_data[0::2], green_data[1::2])]
 filtered = list(filter(lambda x: x != 42, diff))
 
 try:
-    decoded_string = bytes(filtered).decode()
-    print(decoded_string)
+  decoded_string = bytes(filtered).decode()
+  print(decoded_string)
 except UnicodeDecodeError as e:
-    print(f"Error decoding bytes to string: {e}")
+  print(f"Error decoding bytes to string: {e}")

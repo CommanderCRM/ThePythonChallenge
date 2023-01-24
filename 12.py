@@ -4,9 +4,9 @@ import os
 password_mgr = HTTPPasswordMgrWithDefaultRealm()
 
 password_mgr.add_password(realm=None,
-                        uri='http://www.pythonchallenge.com',
-                        user='huge',
-                        passwd='file')
+                          uri='http://www.pythonchallenge.com',
+                          user='huge',
+                          passwd='file')
 
 auth_handler = HTTPBasicAuthHandler(password_mgr)
 
@@ -15,15 +15,15 @@ opener = build_opener(auth_handler)
 response = opener.open('http://www.pythonchallenge.com/pc/return/evil2.gfx')
 
 with open("evil2.gfx", "wb") as f:
-    f.write(response.read())
+  f.write(response.read())
 
 print(os.path.getsize("evil2.gfx"))
 
 with open("evil2.gfx", "rb") as f:
-    data = f.read()
+  data = f.read()
 
 # dividing the file bytes into 5 parts, constructing images from each part
 for i in range(5):
-    open('%d.jpg' % i ,'wb').write(data[i::5])
+  open('%d.jpg' % i, 'wb').write(data[i::5])
 
 os.remove("evil2.gfx")

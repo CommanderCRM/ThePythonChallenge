@@ -5,7 +5,7 @@ nothing_values = []
 nothing_values_after_division = []
 
 url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=12345"
-div_result = str(int(16044/2))
+div_result = str(int(16044 / 2))
 url_after_division = f"http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing={div_result}"
 
 nothing_values.append('12345')
