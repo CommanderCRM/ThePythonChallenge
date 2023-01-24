@@ -268,6 +268,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "llvmlite"
+version = "0.39.1"
+description = "lightweight wrapper around basic LLVM functionality"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "markupsafe"
 version = "2.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
@@ -301,6 +309,19 @@ description = "multidict implementation"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "numba"
+version = "0.56.4"
+description = "compiling Python code using LLVM"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+importlib-metadata = {version = "*", markers = "python_version < \"3.9\""}
+llvmlite = ">=0.39.0dev0,<0.40"
+numpy = ">=1.18,<1.24"
 
 [[package]]
 name = "numpy"
@@ -642,7 +663,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "e412edaea473a431ec3ad979f9c53b0380c9597dadd616bd56f788ee5ce7447f"
+content-hash = "71a707d8592f7b59f9c9d048679aecc6ce95212d2180fe82b9d8ec4d0b6031a0"
 
 [metadata.files]
 aiohttp = []
@@ -667,9 +688,11 @@ itsdangerous = []
 jedi = []
 jinja2 = []
 kiwisolver = []
+llvmlite = []
 markupsafe = []
 matplotlib = []
 multidict = []
+numba = []
 numpy = []
 opencv-python = []
 packaging = []
